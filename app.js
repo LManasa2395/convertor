@@ -1,4 +1,4 @@
-const inputs = [document.querySelector('#first-input'), document.querySelector('#second-input')];
+const inputs = [document.querySelector('.first-input'), document.querySelector('.second-input')];
 const dropdowns = [document.querySelector(".first-dropdown"), document.querySelector(".second-dropdown")];
 const formulaContent = document.querySelector(".formula-content");
 
@@ -24,7 +24,7 @@ const handleFocus = () => {
 const handleChange = (e) => {
     //If both dropdowns point to same, push the selected dropdown's previous value to be the other dropdown's current value
     if(dropdowns[0].selectedIndex === dropdowns[1].selectedIndex){
-        if(e.target.name === '1'){
+        if(e.target.name === 'first-dropdown'){
             dropdowns[1].selectedIndex = prevDropdowns[0];
         } else {
             dropdowns[0].selectedIndex = prevDropdowns[1];

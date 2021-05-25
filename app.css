@@ -3,8 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* align-items: center; */
-    height: 75vh;
+    height: 100vh;
   }
   
   .form-container {
@@ -12,29 +11,32 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 600px;
+    width: 85%;
+    max-width: 600px;
     height: 300px;
     border: 1px solid #dfe1e5;
     border-radius: 8px;
     padding: 50px;
   }
   
-  form {
+  .form {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
   }
   
-  .input-container {
+  .form-input-container {
     margin: 20px;
+    max-width: 100%;
   }
   
-  .input-column {
+  .form-input-column {
     display: flex;
     flex-direction: column;
   }
   
-  input {
+  .form-input {
     padding: 1px;
     text-align: center;
     font-size: 1.3rem;
@@ -45,17 +47,9 @@ body {
   .equals {
     display: inline-block;
     align-items: center;
-    padding: 3px;
-    margin: 3px;
-    font-size: 36px;
-    color: black;
-    font-weight: bold;
-  }
-  
-  .formula-info {
-    display: flex;
-    align-self: flex-start;
-    padding-left: 10px;
+    width: 4px;
+    height: 4px;
+    border: 1px solid black;
   }
   
   .formula-highlight {
@@ -63,31 +57,55 @@ body {
     border-radius: 2px;
     color: white;
     padding: 1px 3px 1.5px 3px;
+    margin-right: 5px;
   }
   
-  label {
+  .form-label {
     border: 3px solid #ecedef;
     background-color: #f8f9fa;
     padding: 0.2rem 0.2rem 0.2rem 0.6rem;
     font-size: 1.3rem;
   }
   
-  select {
+  .form-dropdown {
     background: #f8f9fa;
     border: 2px solid #dadce0;
     font-size: 1.3rem;
     height: 40px;
     line-height: 20px;
     padding: 0.2rem 0.2rem 0.2rem 0.6rem;
-    /* vertical-align: middle; */
-    /* -webkit-appearance: none;
-      background-position-x: 95%; */
-    /* border-radius: 0 0 2px 2px; */
     color: #222;
-    /* margin-top: -1px; */
   }
   
-  option {
+  .form-select-option {
     font-size: 1rem;
   }
   
+  @media screen and (max-width: 767px) {
+    .form-container{
+      padding: 10px;
+      margin: 10px;
+    }
+    .form{
+      flex-direction: column;
+    }
+    .equals {
+      border-top: none;
+      border-bottom: none;
+      height: 15px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .equals{
+      border-left: none;
+      border-right: none;
+      width: 15px;
+    }
+    .formula-info {
+      display: flex;
+      align-self: flex-start;
+      margin-left: 20px;
+      margin-top: 30px;
+    }
+  }

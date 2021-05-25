@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temparature Convertor</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="form-container">
+        <form action="#">
+          <div class="input-container">
+            <div class="input-column">
+              <input type="text" name="first-input" id="first-input">
+              <select name="1" class="first-dropdown" id="first-dropdown">
+                <option value="celsius" selected value="celsius">Celsius</option>
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
+              </select>
+            </div>
+          </div>
+          <div class="equals">=</div>
+          <div class="input-container">
+            <div class="input-column">
+              <input type="text" name="second-input" id="second-input">
+              <select name="2" class="second-dropdown" id="second-dropdown">
+                <option value="celsius">Celsius</option>
+                <option value="fahrenheit" selected value="fahrenheit">Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
+              </select>
+            </div>
+          </div>
+        </form>
+        <div class="formula-info">
+          <p><span class="formula-highlight">Formula:</span> <span class="formula-content"></span></p>
+        </div>
+      </div>
+      <script src="temparatureConversions.js"></script>
+      <script src="app.js"></script>
+</body>
+</html>

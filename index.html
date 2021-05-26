@@ -9,34 +9,37 @@
 </head>
 <body>
     <div class="form-container">
-        <form action="#" class="form">
-          <div class="form-input-container">
-            <div class="form-input-column">
-              <input type="text" name="first-input" class="form-input first-input" id="first-input">
-              <select name="first-dropdown" class="form-dropdown first-dropdown" id="first-dropdown">
-                <option class="form-select-option" value="celsius" selected value="celsius">Celsius</option>
-                <option class="form-select-option" value="fahrenheit">Fahrenheit</option>
-                <option class="form-select-option" value="kelvin">Kelvin</option>
-              </select>
-            </div>
-          </div>
-          <div class="equals"></div>
-          <div class="form-input-container">
-            <div class="form-input-column">
-              <input type="text" name="second-input" class="form-input second-input" id="second-input">
-              <select name="second-dropdown" class="form-dropdown second-dropdown" id="second-dropdown">
-                <option class="form-select-option" value="celsius">Celsius</option>
-                <option class="form-select-option" value="fahrenheit" selected value="fahrenheit">Fahrenheit</option>
-                <option class="form-select-option" value="kelvin">Kelvin</option>
-              </select>
-            </div>
-          </div>
-        </form>
-        <div class="formula-info">
-          <span><span class="formula-highlight">Formula:</span><span class="formula-content"></span></span>
+        <label class="type-label">Select Type of unit to see the convertor:</label>
+        <select name="type-dropdown" class="type-dropdown" id="type-dropdown">
+            <option class="form-select-option" value="temparature">Select Type</option>
+            <option class="form-select-option" value="temparature">Temparature</option>
+            <option class="form-select-option" value="length">Length</option>
+        </select>
+        <div class="form-content hide">
+            <form action="#" class="form">
+                <div class="form-input-container">
+                  <div class="form-input-column">
+                    <input type="text" name="first-input" class="form-input first-input" id="first-input">
+                    <select name="first-dropdown" class="form-dropdown first-dropdown" id="first-dropdown">
+                    </select>
+                  </div>
+                </div>
+                <div class="equals"></div>
+                <div class="form-input-container">
+                  <div class="form-input-column">
+                    <input type="text" name="second-input" class="form-input second-input" id="second-input">
+                    <select name="second-dropdown" class="form-dropdown second-dropdown" id="second-dropdown">
+                    </select>
+                  </div>
+                </div>
+                </form>
+                <div class="formula-info">
+                    <span><span class="formula-highlight">Formula:</span><span class="formula-content"></span></span>
+                </div>
         </div>
       </div>
-      <script src="temparatureConversions.js"></script>
+      <script src="elements.js"></script>
+      <script src="helper.js"></script>
       <script src="app.js"></script>
 </body>
 </html>

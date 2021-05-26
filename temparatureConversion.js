@@ -34,13 +34,7 @@ const kelvinToFahrenheit = temp => {
     return { convertedValue, formula: `(${temp}<strong>°K</strong> - 273.15)* 9 / 5 + 32 = ${convertedValue}<strong>°F</strong>` };
 }
 
-const tempDropdownIndices = {
-    'celsius': 0,
-    'fahrenheit': 1,
-    'kelvin': 2
-}
-
-const convert = (temp, from, to) => {
+const convertTemp = (temp, from, to) => {
     if (from === 0) {
         if (to === 1) return celsiusToFahrenheit(temp);
         if (to === 2) return celsiusToKelvin(temp);
